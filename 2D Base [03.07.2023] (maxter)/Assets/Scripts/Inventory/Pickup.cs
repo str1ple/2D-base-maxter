@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
     public GameObject slotButton;
+    public int id;
     private void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
