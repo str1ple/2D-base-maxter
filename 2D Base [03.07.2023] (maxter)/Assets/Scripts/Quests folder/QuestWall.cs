@@ -10,13 +10,13 @@ public class QuestWall : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    
+
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Keys") && other.GetComponent<Pickup>().id == 1)
         {
             Destroy(other.gameObject);
-            anim.SetTrigger("isTriggered");
+            anim.SetTrigger("barrierTrigger");
         }
     }
 }
