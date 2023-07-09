@@ -13,11 +13,14 @@ public class QuestsMain : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag != "Player" && other.gameObject.GetComponent<Pickup>().id == items[questNumber])
+        if (questNumber < items.Length)
         {
-            questNumber++;
-            Destroy(other.gameObject);
-            CheckQuest();
+            if (other.tag != "Player" && other.gameObject.GetComponent<Pickup>().id == items[questNumber])
+            {
+                questNumber++;
+                Destroy(other.gameObject);
+                CheckQuest();
+            }
         }
     }
 
