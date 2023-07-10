@@ -40,13 +40,9 @@ public class QuestsMain : MonoBehaviour
             }
         }
 
-        if (questNumber == 2)
-        {
-            barrier.SetActive(false);
-        }
-
         if (questNumber == 3)
         {
+            barrier.SetActive(false);
             key.SetActive(true);
         }
     }
