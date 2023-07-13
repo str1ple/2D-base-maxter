@@ -22,9 +22,11 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
 
     private Animator anim;
+    public VectorValue pos;
 
     private void Start()
     {
+        transform.position = pos.initialValue;
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
